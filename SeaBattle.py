@@ -148,7 +148,8 @@ class Player:
 
 class AI(Player):
     def ask(self):
-        d = Dot(randint(0, 5), randint(0, 5))
+        a = self.board.field.__len__()
+        d = Dot(randint(0, a-1), randint(0, a-1))
         print(f"Компьютер выстрелил в координату ({d.x + 1}, {d.y + 1})")
         return d
 
